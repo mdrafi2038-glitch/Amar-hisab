@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             .build();
 
         webView.setWebViewClient(new WebViewClient() {
-            @Override public boolean shouldInterceptRequest(WebView view, android.webkit.WebResourceRequest request) {
+            @Override public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view, android.webkit.WebResourceRequest request) {
                 return assetLoader.shouldInterceptRequest(request.getUrl());
             }
 
